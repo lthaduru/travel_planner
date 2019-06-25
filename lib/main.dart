@@ -57,16 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   final myController = TextEditingController();
-  final focusNode = FocusNode();
 
   @override
   void initState() {
     super.initState();
-    focusNode.addListener(() {
-      if(focusNode.hasFocus) {
-        _selectDate();
-      }
-    });
+
 //    myController.addListener(() {
 //
 //      print("Hitting add Listener");
@@ -136,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         hintText: 'mm/dd/yyy',
                         labelText: 'From',
                       ),
-                      controller: myController,
+//                      controller: myController,
                     ),
                     new TextFormField(
                       decoration: const InputDecoration(
